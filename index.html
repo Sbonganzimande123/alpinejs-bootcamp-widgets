@@ -22,6 +22,7 @@
             padding: 1em;
             background-color: bisque;
             margin-bottom: 1em;
+            
         }
 
         .input > label {
@@ -40,6 +41,38 @@
            /* font-weight: bold; */
         }
 
+        .New {
+            background-color: peru;
+            margin-bottom: 1em;
+            margin: 1em;
+            border: 2px solid;
+        }
+
+        .New1 {
+            background-color: peru;
+            margin-bottom: 1em;
+            margin: 1em;
+            border: 2px solid;
+        }
+
+        .New2 {
+            background-color: peru;
+            margin-bottom: 1em;
+            margin: 1em;
+            border: 2px solid;
+        }
+
+        .New3 {
+            background-color: peru;
+            margin-bottom: 1em;
+            margin: 1em;
+            border: 2px solid;
+        }
+
+
+       body {
+        background-color: brown;
+       }
 
     </style>
 
@@ -47,9 +80,10 @@
 
 <body>
 
+<div class="New1">
     <div x-data="greetWidget" >
         <h2>Greet Widget</h2>
-       
+        <div class="input">
         <div x-show="message.length > 0" class="message" x-text="message">
             You will be greeted here...
         </div>
@@ -58,7 +92,11 @@
         <input type="text" x-model="name" id="name">
         <button x-on:click="greetMe">Greet!</button>
     </div>
+</div>
+</div>
 
+
+<div class="New">
     <div class="" x-data="{
         airtimeUsage : '',
         availableAmount : '0.00',
@@ -69,53 +107,55 @@
         }
     }" >
         <h2>Enough airtime</h2>
-
         <div class="input">
             <label for="usage">Please enter your airtime usage: </label>
             <input type="text" x-model="airtimeUsage" id="usage">  
         </div>
-        
         <div class="input">
             <label for="amount">Amount available: </label>
             <input type="text" x-model="availableAmount" id="amount">  
         </div>
-        
         <div class="message" x-text="airtimeMessage">   
         </div>
-
         <div>
             <button x-on:click="calculate">Calculate airtime usage</button>
         </div>
     </div>
+</div>
 
-    <div class="phoneBill">
+
+<div class="New2"> 
+<div class="phoneBill">
         <div x-data="totalPhoneBillWidget">
         <h2>Total Phone Bill Widget</h2>
-        <label for="shift">string</label>
+        <div class="input">
+        <label for="shift">String:</label>
         <input type="text" x-model="string" id="shift"> <button @click="calculateTotal, show2=true">charge</button>
             <div class="showAmount" x-show="show2" x-text="stringAmount">
-               phone bill HERE
-            </div>
+               phone bill HERE   
+        </div>
         </div>
     </div>
+</div>
+</div>
 
 
+<div class="New3">
     <div class="" x-data="yearsAgoWidget">
         <h2>Years ago</h2>
-
         <div class="input">
             <label for="">Please enter the year: </label>
             <input type="number" x-model="newDate" id="newDate">
         </div>
-
         <div class="message" x-text="message">The number of years will appear here...
         </div>
         <div>
             <button @click="calculate" >Calculate the number of years</button>
         </div>
-
-    </div>
+    </div>  
 </div>
+</div>
+
 
 
 
